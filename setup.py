@@ -34,7 +34,7 @@ test_requirements += these_requirements
 
 setup(
     name="Flask-CloudFlare",
-    version="0.1",
+    version="0.2",
     author="Bill Schumacher",
     author_email="williamschumacher@gmail.com",
     description="A Flask extension that wraps pycflare to provide python bindings for CloudFlare's API.",
