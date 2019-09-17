@@ -20,7 +20,7 @@ packages = [
     "flask_cloudflare",
 ]
 
-requirements = ["requests", "pycflare==0.5", "Flask", "simplejson"]
+requirements = ["requests", "pycflare==0.6", "Flask", "simplejson"]
 system_platform = platform.system()
 
 these_requirements = []
@@ -34,7 +34,7 @@ test_requirements += these_requirements
 
 setup(
     name="Flask-CloudFlare",
-    version="0.5",
+    version="0.6",
     author="Bill Schumacher",
     author_email="williamschumacher@gmail.com",
     description="A Flask extension that wraps pycflare to provide python bindings for CloudFlare's API.",
