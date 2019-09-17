@@ -20,7 +20,7 @@ packages = [
     "flask_cloudflare",
 ]
 
-requirements = ["requests", "pycflare>=0.2a1", "Flask"]
+requirements = ["requests", "pycflare==0.3", "Flask"]
 system_platform = platform.system()
 
 these_requirements = []
