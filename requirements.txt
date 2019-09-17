@@ -1,2 +1,2 @@
 Flask
-pycflare==0.5
+pycflare==0.6
