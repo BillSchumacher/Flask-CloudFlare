@@ -27,10 +27,11 @@ class CloudFlare(object):
     def init_app(self, app):
         auth_email = app.config.get('CLOUDFLARE_AUTH_EMAIL')
         auth_key = app.config.get('CLOUDFLARE_AUTH_KEY')
+        redis_compat = app.config.get('CLOUDFLARE_ENABLE_REDIS_COMPATIBILITY', False)
         if auth_key is None or auth_email is None:
             raise RuntimeError("You must provide your CloudFlare AUTH_EMAIL and AUTH_KEY via CLOUDFLARE_AUTH_EMAIL and "
                                "CLOUDFLARE_AUTH_KEY in the app.config.")
-        self.cf = PyCloudFlare(auth_email=auth_email, auth_key=auth_key)
+        self.cf = PyCloudFlare(auth_email=auth_email, auth_key=auth_key, enable_redis_compatibility=redis_compat)
         app.extensions['cloudflare'] = self
 
     def register_account(self, account_id, name):
