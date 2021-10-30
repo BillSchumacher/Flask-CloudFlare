@@ -23,10 +23,12 @@ packages = [
 requirements = ["requests", "pycflare==0.8", "Flask", "simplejson"]
 system_platform = platform.system()
 
-these_requirements = []
-for requirement in requirements:
-    if not requirement.startswith('-e'):
-        these_requirements.append(requirement)
+these_requirements = [
+    requirement
+    for requirement in requirements
+    if not requirement.startswith('-e')
+]
+
 setup_requirements = ['pytest-runner', ]
 setup_requirements += these_requirements
 test_requirements = ['pytest', ]
